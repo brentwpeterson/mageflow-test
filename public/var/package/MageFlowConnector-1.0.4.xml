@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<package>
+    <name>MageFlowConnector</name>
+    <version>1.0.4</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL 3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>MageFlow Connector integrates a Magento instance with MageFlow.</summary>
+    <description>MageFlow is an essential tool for every Magento development team.&#xD;
+MageFlow Connector integrates a Magento instance to MageFlow REST API.</description>
+    <notes>0.1.0 This is a pre-beta release.&#xD;
+0.3.0 Almost beta quality release.&#xD;
+0.3.1 Packaging fix&#xD;
+0.3.2 Added missing jQuery map file&#xD;
+0.3.3 Bugfix in company data&#xD;
+0.3.4 Added MFx tag to frontend HTML&#xD;
+0.4.0 More entities fixed, website packed&#xD;
+0.4.1 oauth setup shell script, API data format update&#xD;
+0.4.2 Fixed Advanced Maintenance mode. It can be switched from the backend and via API.&#xD;
+0.4.3 Fixed bug in setup scripts that prevented installation&#xD;
+0.5.0 Beta release of MFx&#xD;
+0.5.1 Fixes in API resources, fixed rollback&#xD;
+0.5.2 Added cache cleaning before creating OAuth user&#xD;
+0.5.3 Changes in system/info format&#xD;
+0.6.0 Lot of fixes, change in system/log format, caching&#xD;
+0.6.1 ** Bug&#xD;
+    * [MFX-1] - Head.php invalid argument Warning in the logs&#xD;
+    * [MFX-2] - Fatal error in HtmlRenderer&#xD;
+    * [MFX-4] - Wrong password reset link in the e-mail sent by MFx&#xD;
+0.6.2 Packaging fix&#xD;
+0.6.3 - ** Bug&#xD;
+    * [MFX-6] - create_backend_user script is linked from wrong place&#xD;
+0.7.0 &#xD;
+** Bug&#xD;
+    * [MFX-5] - Error when trying to send cahngeset from pushgrid&#xD;
+** Task&#xD;
+    * [MFX-7] - Review all logging and make it use log levels&#xD;
+0.7.1&#xD;
+Bug&#xD;
+[MFX-9] - catalog/attribute and catalog/attributeset return empty list&#xD;
+[MFX-11] - Root category not mapped properly when website is migrated&#xD;
+[MFX-12] - After migrating websites form M1 to M2 there is an empty store and store view row&#xD;
+0.7.2 bugfixes&#xD;
+0.7.3 &#xD;
+** Bug&#xD;
+    * [MFX-17] - Generate initial GUID for Magento' root category&#xD;
+0.7.4&#xD;
+0.7.5&#xD;
+** Improvement&#xD;
+    * [MFX-8] - Send Project id when Pull grid asks for Changesets&#xD;
+0.7.6&#xD;
+0.7.7&#xD;
+** Bug&#xD;
+    * [MFX-22] - Grid ordering doesn't work and default ordering should be by time descending&#xD;
+    * [MFX-23] - Grid filter on preview field breaks Magento&#xD;
+0.7.8 &#xD;
+Various bugs&#xD;
+0.7.9&#xD;
+** Story&#xD;
+    * [MFX-29] - As API User I want to make request to ping resource to check API status&#xD;
+0.7.10&#xD;
+    * [MFX-16] - Admin user changeset data is invalid&#xD;
+    * [MFX-30] - Automatic login from MF not working in test&#xD;
+0.7.11&#xD;
+** Task&#xD;
+    * [MFX-33] - Add SSL peer verification to Oauth client&#xD;
+0.8.0&#xD;
+** Bug&#xD;
+    * [MFX-24] - Remove commented code&#xD;
+    * [MFX-25] - Modify MageFlow API settings view&#xD;
+    * [MFX-26] - Fix license URL to http://mageflow.com/license/connector/eula.txt&#xD;
+    * [MFX-27] - Fix docblock&#xD;
+    * [MFX-28] - Fix license URL to http://mageflow.com/license/connector/eula.txt&#xD;
+    * [MFX-34] - Fix oauth setup API resource URL&#xD;
+&#xD;
+** Improvement&#xD;
+    * [MFX-31] - Refactor this method body to a separate model&#xD;
+&#xD;
+0.8.1&#xD;
+** Bug&#xD;
+    * [MFX-35] - Fix api resource &amp; field names when authenticating MF-login&#xD;
+Release Notes - Magento Connector - Version 0.8.2&#xD;
+** Bug&#xD;
+    * [MFX-37] - create_oauth_consumer.php does not exit with proper exit code&#xD;
+&#xD;
+0.8.3&#xD;
+ * refactoring and bugfixes in connection dialog&#xD;
+&#xD;
+0.9.0&#xD;
+** Bug&#xD;
+    * [MFX-39] - Packing and transfering of catalog/attributeset does not work properly&#xD;
+    * [MFX-40] - Too much log kills Magento (memory, print_r)&#xD;
+&#xD;
+0.9.1&#xD;
+** Bug&#xD;
+    * [MFX-42] - Missing class file for Helper/Handler/System/User&#xD;
+    * [MFX-43] - Call to undefined method Mageflow_Connect_Helper_Handler_System_User::systemUserHandler() in /srv/vhosts/v2c0w.test.mageflow.net/public/app/code/community/Mageflow/Connect/Model/Api2/System/User/Rest/Admin/V1.php on line 108&#xD;
+    * [MFX-44] - Role info is not read when admin user changeset is imported to receving instance&#xD;
+&#xD;
+0.9.2&#xD;
+** Bug&#xD;
+    * [MFX-47] - Magento WYSIWYG file model absolute URL is wrong&#xD;
+** New Feature&#xD;
+    * [MFX-45] - Create Media Index and perform initial media indexing&#xD;
+&#xD;
+0.9.3&#xD;
+** Bug&#xD;
+    * [MFX-48] - Wrong entity entity handlers in pullAction and applyAction&#xD;
+** New Feature&#xD;
+    * [MFX-46] - Add API resource that would handle cms media&#xD;
+1.0.0 Official stable release.&#xD;
+&#xD;
+1.0.1 &#xD;
+** Bug&#xD;
+    * [MFX-50] - PHP 5.3 compatibility issue&#xD;
+&#xD;
+1.0.2&#xD;
+** Bug&#xD;
+    * [MFX-52] - AttributeSet cannot be migrated&#xD;
+&#xD;
+1.0.3&#xD;
+** Bug&#xD;
+    * [MFX-53] - White page after saving system config&#xD;
+&#xD;
+</notes>
+    <authors><author><name>Sven Varkel</name><user>svenvarkel</user><email>sven@mageflow.com</email></author><author><name>Urmas Lipso</name><user>urmaslipso</user><email>urmas@mageflow.com</email></author><author><name>MageFlow</name><user>mageflow</user><email>info@mageflow.com</email></author></authors>
+    <date>2014-05-20</date>
+    <time>19:57:27</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Mageflow_Connect.xml" hash="e08863c337887f7f14730f14f019c0bd"/></dir></target><target name="magecommunity"><dir name="Mageflow"><dir name="Connect"><dir name="Block"><dir name="Adminhtml"><dir name="Extensions"><dir name="Available"><file name="Grid.php" hash="be7c59e75d7b02eee4d5a33cce20653b"/></dir><file name="Available.php" hash="14397bc8b3f37c842866af43d84575ba"/><dir name="Installed"><file name="Grid.php" hash="903df6cdbade5adda043c4bfcd0ea146"/></dir><file name="Installed.php" hash="54a4ec55f1e388efc0ebe9c6d22e00e4"/></dir><file name="Initjs.php" hash="7201624b8311112edc519f225d4c4a4c"/><dir name="Page"><file name="Head.php" hash="b19f19feaff1d03e5bfd2baae4fab3fb"/></dir><dir name="Pull"><dir name="Grid"><dir name="Column"><file name="Renderer.php" hash="ef61ce092de117c1f5a4aaf99e284b2f"/></dir></dir><file name="Grid.php" hash="da271ba64c4d2864ecf51c5a70bf17f0"/></dir><file name="Pull.php" hash="b870fb09754cf383cb22d543a1f8d2c4"/><dir name="Push"><dir name="Grid"><dir name="Column"><file name="Renderer.php" hash="290923f39fadbdb0131197a3d6b2bf95"/></dir></dir><file name="Grid.php" hash="dd56861b479446986dab529269d1ecfa"/></dir><file name="Push.php" hash="ce610e67af33d4316fa1c5549f115486"/><dir name="Widget"><file name="Button.php" hash="0d21c68de5b2ca664551b484669aa722"/></dir></dir><dir name="System"><dir name="Config"><dir name="Api"><file name="Basebutton.php" hash="7ef6200e397138fc879c0f5036b18057"/><file name="Connectbutton.php" hash="cc52ed761c6514c67c2c3b0b1b95a0cd"/><file name="Instancebutton.php" hash="87499e75050c4ed96d7f6e451d465e22"/><file name="Oauthbutton.php" hash="4f2c68f2d6f78447f473e7cce8d7de14"/><file name="Testbutton.php" hash="196b3e538fbfd78a4318db41a471d49f"/></dir></dir></dir></dir><dir name="Controller"><file name="AbstractController.php" hash="199ec244c9e833a3531f3e0a2f6e0279"/></dir><dir name="Helper"><file name="Data.php" hash="05019124cf82e6b75e7d7a99b19fdb38"/><dir name="Handler"><file name="Abstract.php" hash="0413462f7cb618b347a90a2728049b61"/><dir name="Catalog"><file name="Attribute.php" hash="931b2b07446e1031a6e261dbbc70d47f"/><file name="Attributeset.php" hash="60e92148a59d225e17380fb80091fef5"/><file name="Category.php" hash="3de7c305651f5c3607fabf12a435e1ef"/></dir><dir name="Cms"><file name="Abstract.php" hash="d5ef8f93ac0cb6a9fa1546c63ac896f7"/><file name="Block.php" hash="16c662246b22062083cc25b6389196b7"/><file name="Media.php" hash="3091d5d941d7843363a3b5983a9f60cb"/><file name="Page.php" hash="522cdcde67fd289fce965c367311e1dd"/></dir><dir name="System"><file name="Configuration.php" hash="4c92dbf587a97bad0ee418b5c8148230"/><file name="User.php" hash="dca4e79dd833f31217701a9a7e881a86"/><file name="Website.php" hash="3fcecbed34f2c4df6eb82e3645433053"/></dir></dir><file name="Log.php" hash="1b501c9e08c41402f0639aa04375e938"/><file name="Media.php" hash="ee19ad7d947cdde927d918f059387903"/><file name="Oauth.php" hash="a32d3b7623c19066f31784fa4426ac69"/><file name="System.php" hash="4a193541c17f131ab0811508aa033ffb"/><file name="Type.php" hash="c4614a6e52cd1c481e7e7534db7b3bb3"/></dir><file name="LICENSE.txt" hash="1fde6da631f2970f5d17b648ce28a2a7"/><dir name="Model"><dir name="Admin"><file name="Observer.php" hash="26ea42e67558bc9a29b28e19f6c1c272"/></dir><dir name="Api2"><file name="Abstract.php" hash="f3c7399a5cdc3271f40c8bbf15e6ffbd"/><dir name="Catalog"><dir name="Attribute"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="035d09ad84767b12138ef5e683a1c8e5"/></dir></dir></dir><dir name="Attributeset"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="31a24946efb5c9c8a03213fe613b5e28"/></dir></dir></dir><dir name="Category"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="2c225a6c745f35407724f89d6e7a9c2b"/></dir></dir></dir></dir><dir name="Cms"><dir name="Block"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="2129b34565232956cdd5c946bb56b095"/></dir></dir></dir><dir name="Media"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="58faedc7cc3a7b383f4d031f21f530c0"/></dir></dir></dir><dir name="Page"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="964ccb8893c015f689993a06f15afd86"/></dir></dir></dir></dir><file name="Cms.php" hash="b70a91c506fa65b241ff7f3eb711c66a"/><file name="Errorcode.php" hash="f8816afad23e11d0d4685b0013416ae8"/><dir name="Help"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="b91e02084f0b104d75f590149e92f173"/></dir><dir name="Guest"><file name="V1.php" hash="aa7056ac9ef658a160d58e056de79001"/></dir></dir></dir><dir name="Ping"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="f84e687d1c241f6ec897617e93f2ae1d"/></dir></dir></dir><dir name="Renderer"><file name="Html.php" hash="527f188d300b07902e20860dba67f536"/></dir><dir name="System"><dir name="Backup"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="dd48a5eb1c8c1d8b62cce225544e567f"/></dir></dir></dir><dir name="Configuration"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="cb15bf0bda28cf27f3c27d9fc2a39cf8"/></dir></dir></dir><dir name="Cron"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="eca8aeeff94f4ac3ce39be3a20102483"/></dir></dir></dir><dir name="Info"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="86480f8455c02f82d629d1fda30c2685"/></dir></dir></dir><dir name="Log"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="11ae25f1c11ae7911712de0b8068d278"/></dir></dir></dir><dir name="Maintenance"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="6b7d0cb6aa7f86389865d483420b09fe"/></dir></dir></dir><dir name="Module"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="7f2381c8f08534402ce9f356473344bd"/></dir></dir></dir><dir name="Observer"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="5d518a8db503deca45ff7437a5a24308"/></dir></dir></dir><dir name="Rewrite"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="9b64a565c936551ef38411145de22b44"/></dir></dir></dir><dir name="User"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="50db072f1714b74d5254dedcbd1588df"/></dir></dir></dir><dir name="Website"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="3b436e91d1b7fe8f8e331393291403cf"/></dir></dir></dir></dir></dir><dir name="Changeset"><file name="Item.php" hash="b12009fa80464cfe3756f239326c8ee4"/></dir><dir name="Data"><file name="Collection.php" hash="65d25c4d1e709332818cd11709124ded"/></dir><file name="Extension.php" hash="949c07be6b4d2ff8c994ab1a9af3d1d2"/><dir name="Media"><file name="Index.php" hash="d35dedee1fd9d0e39993ae424315b822"/></dir><file name="Observer.php" hash="1496210159de08747dfdd3f8dec3119e"/><dir name="Resource"><dir name="Changeset"><dir name="Item"><file name="Collection.php" hash="eab6c588a4ce9252a276a6812ddaf89e"/></dir><file name="Item.php" hash="b1be526e242328e7ae54d8e81a2448d1"/></dir><dir name="Config"><file name="Data.php" hash="e251740ba3ef8c06ba4de55f3ac2e44d"/></dir><dir name="Extension"><file name="Collection.php" hash="16410bf15b7177e5b4dd23c00bc80c1e"/></dir><file name="Extension.php" hash="49407e35b9b5a50eb64705ab09b5d485"/><dir name="Media"><dir name="Index"><file name="Collection.php" hash="f7ad48dea82188a9a0f61687d80c9684"/></dir><file name="Index.php" hash="85966980eaf1f1ec3435f58a59bb34f9"/></dir><file name="Setup.php" hash="bba0dbc1593569f74c2940c9d83bd84e"/><dir name="System"><dir name="Info"><dir name="Performance"><file name="Collection.php" hash="8ba9adda79cc7edd81a56b7810a19d09"/></dir><file name="Performance.php" hash="71b0c3230bfa7d3b7c9a02b60cf80d4c"/></dir></dir></dir><dir name="System"><dir name="Config"><dir name="Api"><file name="Companylist.php" hash="9340b50abcdec61dd0ec4cd6cafb260d"/><file name="Emptylist.php" hash="71cd9c3a691a16d0c3dfd174e4361bc5"/><file name="Levellist.php" hash="e863494a94a42160ce53337539b68e98"/><file name="Projectlist.php" hash="3cbe3af52b4841e73394fcb1a34efa0d"/></dir></dir><file name="Config.php" hash="c16d1187c287d575a21b338713a9a194"/><dir name="Info"><file name="Cpu.php" hash="2b14a0825a4e603a2d926a020bb1231e"/><file name="Memory.php" hash="a688416ce50ce93a264e81bd9344d112"/><file name="Os.php" hash="88485d187a41c4d9c88a21b3f5aee32a"/><file name="Performance.php" hash="e8192700e890ddcadeaea24f4a5e70ea"/><file name="Session.php" hash="8983a0425370f21b5628235cdf5c8523"/></dir><file name="Info.php" hash="7d3568a8ccd0952969945a5be22f468a"/></dir><dir name="Types"><file name="Supported.php" hash="14ed6053dd90206c6756a9d886965aa1"/></dir></dir><dir name="controllers"><file name="AjaxController.php" hash="b02b728c0492855b5d01acd5b7aa5d95"/><file name="LoginController.php" hash="20db4d9a0efc511a8dc5600f39dbc718"/><file name="PullController.php" hash="1f8234d8104fdd74d0db7c3ab90cd0c3"/><file name="PushController.php" hash="1c16389dd61bb3fb3c0b690893ebef7b"/></dir><dir name="etc"><file name="adminhtml.xml" hash="a41d86b3cd47be2e4ad84cfc0b5f5ff7"/><file name="api2.xml" hash="af786674eef95a27345c8943ebe9b214"/><file name="config.xml" hash="343eb908653436ba0ade9fc38f3ec344"/><file name="system.xml" hash="d48da38682c9ded9f13e5e8a1009d00c"/></dir><dir name="sql"><dir name="mageflow_connect_setup"><file name="install-0.2.0.php" hash="6e4f25b3082969d5add767ab0252b604"/><file name="upgrade-0.2.0-0.2.1.php" hash="77d23c461efa3e6f7c679970422fae36"/><file name="upgrade-0.2.1-0.2.2.php" hash="4399a3342b7bc72c2ec93f3eb365d132"/><file name="upgrade-0.3.9-0.4.0.php" hash="6f58340b484dbb34f96d851e57e71ebf"/><file name="upgrade-0.4.0-0.4.1.php" hash="dd897e501bc4a385ab643221d9996575"/><file name="upgrade-0.7.2-0.7.3.php" hash="74ba7b0b15be1e8ac847a10459a2122d"/><file name="upgrade-0.9.1-0.9.2.php" hash="e01a1342efa8c7ca36a01cb5085a2368"/></dir></dir></dir></dir></target><target name="mageweb"><dir name="js"><dir name="mageflow"><file name="core.js" hash="26751ddc4859c6cd78a389f870d3cf03"/><file name="jquery-2.0.3.min.map" hash="fe0db0aaca325f4f0bd67e7d557bc0e7"/><file name="jquery.js" hash="fd41e5b7296ee6087c3ff2f7571361c9"/><file name="noconflict.js" hash="3179f2255b046d5f2e9a71e365287bef"/></dir></dir></target><target name="magelib"><dir name="Mageflow"><dir name="Connect"><file name="Module.php" hash="4f9e329f3994bb4abfa81350d2973d87"/><dir name="config"><file name="module.config.php" hash="268998d9af375ad020b459fc9a0639a4"/></dir><dir name="src"><dir name="Helper"><file name="Logger.php" hash="ce4b075b4b1aaf66e2eb94c3829cb1dd"/></dir><dir name="Model"><file name="AbstractModel.php" hash="e994f8058d74674dd488621c894d84bc"/><dir name="Api"><file name="AbstractClient.php" hash="41ffbb8b82100bb82e90c798c96098b8"/><file name="AbstractRequest.php" hash="b9306217b40ee05c11f23e7d710deb4d"/><dir name="Mageflow"><file name="Client.php" hash="2467e5ac64a9c054f41858cb1f167e0d"/></dir><file name="Response.php" hash="5851b9db7068ed80e3803b0caa7d1895"/></dir><dir name="Oauth"><file name="Consumer.php" hash="94ff5926cfd1839b9be3829f2f6d642f"/><file name="Request.php" hash="7982e4433750b1ba5065c6803db71f72"/><dir name="Signature"><file name="HMACSHA1.php" hash="f5b1191476c942f10b40b4aad7c4129e"/><file name="SignatureBuilder.php" hash="579f360ad7c5199bf860115dcab7819d"/></dir><file name="Token.php" hash="49db948ea95ece132071b0505a4de773"/><file name="Util.php" hash="7a2054b335e82ceb484c340737c46c2a"/></dir></dir></dir><dir name="tests"><file name="bootstrap.php" hash="def3d2f25f29b1f0a5232146cbbd4817"/><file name="phpunit.xml" hash="a1494b22175b5f5a61c4d9a788e2d943"/><dir name="src"><dir name="Model"><dir name="Api"><dir name="Mageflow"><file name="ClientTest.php" hash="9034699a99dd4774dbd1ca566d10ba9e"/></dir></dir></dir></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><dir name="mageflow"><file name="connect.xml" hash="9fbab407eb707a3acb8fd50fcc307a19"/></dir></dir><dir name="template"><dir name="mageflow"><file name="js.phtml" hash="60b1550feca5c396f1483f0f3ab04fd4"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><dir name="mageflow"><file name="connect.xml" hash="d8f50b8e0da9df98c3bee31fe0920732"/></dir></dir><dir name="template"><dir name="mageflow"><file name="tag.phtml" hash="b50f9cff93e158a47ad9f6b8c1a79967"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="mageflow"><file name="styles.css" hash="9d5b8ba7451d9333805aa9dd6ab1c517"/></dir></dir></dir></dir></target><target name="mage"><dir name="shell"><file name="create_oauth_consumer.php" hash="80ee48714294473122736fddd6aba917"/><file name="create_backend_user.php" hash="88900741175a86c2c9d2525a2e1e8e21"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

@@ -1,0 +1,14 @@
+.DS_Store
+._*
+.AppleDouble
+.project
+.settings
+.idea
+public/app/etc/local.xml
+public/var/locks/*
+public/var/cache/*
+public/downloader/*.cfg
+public/.gitignore
+public/var/package/tmp/
+vendor/
+composer.lock

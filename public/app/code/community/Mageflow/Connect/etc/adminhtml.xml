@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * MageFlow
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@mageflow.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * If you wish to use the MageFlow Connect extension as part of a paid
+ * service please contact licence@mageflow.com for information about
+ * obtaining an appropriate licence.
+ */
+
+/**
+ * MageFlow Connector Magento extension adminhtml configuration file
+ *
+ * @category   MFX
+ * @package    Mageflow_Connect
+ * @subpackage Configuration
+ * @author     MageFlow OÜ, Estonia <info@mageflow.com>
+ * @copyright  Copyright (C) 2014 MageFlow OÜ, Estonia (http://mageflow.com) 
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @link       http://mageflow.com/
+ */
+-->
+<config>
+    <menu>
+        <mageflow translate="title" module="mageflow_connect">
+            <title>MageFlow</title>
+            <sort_order>100</sort_order>
+            <children>
+                <mageflow_connect_migrate>
+                    <title>Push Change Sets</title>
+                    <action>mageflow_connect/push/index</action>
+                    <sort_order>5</sort_order>
+                </mageflow_connect_migrate>
+                <mageflow_connect_pull>
+                    <title>Pull Change Sets</title>
+                    <action>mageflow_connect/pull/index</action>
+                    <sort_order>5</sort_order>
+                </mageflow_connect_pull>
+                <mageflow_connect_configure>
+                    <title>Connect</title>
+                    <action>adminhtml/system_config/edit/section/mageflow_connect/</action>
+                    <sort_order>20</sort_order>
+                </mageflow_connect_configure>
+            </children>
+        </mageflow>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <mageflow>
+                        <children>
+                            <mageflow_connect_migrate>
+                                <title>Enable content and config migration?</title>
+                            </mageflow_connect_migrate>
+                        </children>
+                    </mageflow>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mageflow_connect>
+                                        <title>MageFlow Connect Configuration</title>
+                                    </mageflow_connect>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

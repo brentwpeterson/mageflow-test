@@ -1,0 +1,30 @@
+{
+    "name": "mageflow/skeleton_1810",
+    "description": "MageFlow Magento skeleton repository",
+    "type": "library",
+    "keywords": ["mageflow", "magento", "skeleton"],
+    "homepage": "http://mageflow.com",
+    "license": "OSL3",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Sven Varkel",
+            "email": "sven@mageflow.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "mageflow/taf": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Core\\": "lib/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:mageflow/taf.git"
+        }
+    ]
+}

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * MageFlow
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@mageflow.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * If you wish to use the MageFlow Connect extension as part of a paid
+ * service please contact licence@mageflow.com for information about
+ * obtaining an appropriate licence.
+ */
+
+/**
+ * MageFlow Connector Magento extension configuration file
+ *
+ * @category   MFX
+ * @package    Mageflow_Connect
+ * @subpackage Configuration
+ * @author     MageFlow OÜ, Estonia <info@mageflow.com>
+ * @copyright  Copyright (C) 2014 MageFlow OÜ, Estonia (http://mageflow.com) 
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @link       http://mageflow.com/
+ */
+-->
+<config>
+    <modules>
+        <Mageflow_Connect>
+            <version>1.0.3</version>
+        </Mageflow_Connect>
+    </modules>
+    <global>
+        <models>
+            <mageflow_connect>
+                <class>Mageflow_Connect_Model</class>
+                <resourceModel>mageflow_connect_resource</resourceModel>
+            </mageflow_connect>
+            <mageflow_connect_resource>
+                <class>Mageflow_Connect_Model_Resource</class>
+                <entities>
+                    <performance_history>
+                        <table>mageflow_performance_history</table>
+                    </performance_history>
+                    <changeset_item>
+                        <table>mageflow_changeset_item</table>
+                    </changeset_item>
+                    <media_index>
+                        <table>mageflow_media_index</table>
+                    </media_index>
+                </entities>
+            </mageflow_connect_resource>
+            <core_resource>
+                <rewrite>
+                    <config_data>Mageflow_Connect_Model_Resource_Config_Data</config_data>
+                </rewrite>
+            </core_resource>
+            <admin>
+                <rewrite>
+                    <observer>Mageflow_Connect_Model_Admin_Observer</observer>
+                </rewrite>
+            </admin>
+        </models>
+        <resources>
+            <mageflow_connect_setup>
+                <setup>
+                    <module>Mageflow_Connect</module>
+                    <class>Mageflow_Connect_Model_Resource_Setup</class>
+                </setup>
+            </mageflow_connect_setup>
+        </resources>
+        <helpers>
+            <mageflow_connect>
+                <class>Mageflow_Connect_Helper</class>
+            </mageflow_connect>
+        </helpers>
+        <blocks>
+            <mageflow_connect>
+                <class>Mageflow_Connect_Block</class>
+            </mageflow_connect>
+            <adminhtml>
+                <rewrite>
+                    <widget_button>Mageflow_Connect_Block_Adminhtml_Widget_Button</widget_button>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <events>
+            <!--<controller_action_predispatch>-->
+            <!--<observers>-->
+            <!--<dispatch_correction>-->
+            <!--<class>mageflow_connect/observer</class>-->
+            <!--<method>actionPreDispatchAdmin</method>-->
+            <!--</dispatch_correction>-->
+            <!--</observers>-->
+            <!--</controller_action_predispatch>-->
+            <controller_front_send_response_after>
+                <observers>
+                    <collect_memory_usage>
+                        <class>mageflow_connect/observer</class>
+                        <method>collectMemoryUsage</method>
+                    </collect_memory_usage>
+                </observers>
+            </controller_front_send_response_after>
+            <model_save_commit_after>
+                <observers>
+                    <save_changeset_item>
+                        <class>mageflow_connect/observer</class>
+                        <method>saveChangesetItem</method>
+                    </save_changeset_item>
+                </observers>
+            </model_save_commit_after>
+            <model_save_before>
+                <observers>
+                    <add_mf_data>
+                        <class>mageflow_connect/observer</class>
+                        <method>onBeforeSave</method>
+                    </add_mf_data>
+                </observers>
+            </model_save_before>
+            <model_config_data_save_before>
+                <observers>
+                    <add_mf_data>
+                        <class>mageflow_connect/observer</class>
+                        <method>onBeforeSave</method>
+                    </add_mf_data>
+                </observers>
+            </model_config_data_save_before>
+            <controller_action_predispatch>
+                <observers>
+                    <maintenance_mode>
+                        <class>mageflow_connect/observer</class>
+                        <method>activateMaintenanceMode</method>
+                    </maintenance_mode>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+        <api2>
+            <response>
+                <renders>
+                    <!-- HTML -->
+                    <text_html>
+                        <type>text/html</type>
+                        <model>mageflow_connect/api2_renderer_html</model>
+                    </text_html>
+                </renders>
+            </response>
+        </api2>
+    </global>
+
+    <admin>
+        <routers>
+            <mageflow_connect>
+                <use>admin</use>
+                <args>
+                    <module>Mageflow_Connect</module>
+                    <frontName>mageflow_connect</frontName>
+                </args>
+            </mageflow_connect>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <mageflow_connect>
+                    <file>mageflow/connect.xml</file>
+                </mageflow_connect>
+            </updates>
+        </layout>
+    </adminhtml>
+    <frontend>
+        <layout>
+            <updates>
+                <mageflow_connect>
+                    <file>mageflow/connect.xml</file>
+                </mageflow_connect>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <mageflow_connect>
+            <advanced>
+                <log_enabled>1</log_enabled>
+                <api_url>https://app.mageflow.com/api/1.0/</api_url>
+                <log_lines>100</log_lines>
+                <log_level>7</log_level>
+            </advanced>
+            <system>
+                <maintenance_mode>0</maintenance_mode>
+            </system>
+            <supported_types>
+                <cms_block>
+                    <type>Mage_Cms_Model_Block</type>
+                    <short>cms/block</short>
+                </cms_block>
+                <cms_page>
+                    <type>Mage_Cms_Model_Page</type>
+                    <short>cms/page</short>
+                </cms_page>
+                <core_config_data>
+                    <type>Mage_Core_Model_Config_Data</type>
+                    <short>system/configuration</short>
+                </core_config_data>
+                <catalog_category_entity>
+                    <type>Mage_Catalog_Model_Category</type>
+                    <short>catalog/category</short>
+                </catalog_category_entity>
+                <eav_attribute>
+                    <type>Mage_Catalog_Model_Resource_Eav_Attribute</type>
+                    <short>catalog/attribute</short>
+                </eav_attribute>
+                <eav_attributeset>
+                    <type>Mage_Eav_Model_Entity_Attribute_Set</type>
+                    <short>catalog/attributeset</short>
+                </eav_attributeset>
+                <admin_user>
+                    <type>Mage_Admin_Model_User</type>
+                    <short>admin/user</short>
+                </admin_user>
+                <core_website>
+                    <type>Mage_Core_Model_Website</type>
+                    <short>core/website</short>
+                </core_website>
+                <core_store>
+                    <type>Mage_Core_Model_Store</type>
+                    <short>core/store</short>
+                </core_store>
+                <core_store_group>
+                    <type>Mage_Core_Model_Store_Group</type>
+                    <short>core/store_group</short>
+                </core_store_group>
+                <base_url>
+                    <type>Mage_XmlConnect_Model_Adminhtml_System_Config_Backend_Baseurl</type>
+                    <short>base_url</short>
+                </base_url>
+                <media_file enabled="false">
+                    <type>Mageflow_Connect_Model_Media_Index</type>
+                    <short>media/file</short>
+                </media_file>
+                <oauth_consumer/>
+                <eav_attribute_group/>
+                <eav_attribute_option/>
+                <eav_attribute_option_value/>
+                <eav_attribute_label/>
+            </supported_types>
+        </mageflow_connect>
+    </default>
+</config>
